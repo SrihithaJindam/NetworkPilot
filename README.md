@@ -15,25 +15,25 @@ This project is designed to be **simple, clear, and modular** so you can master 
 
 ---
 
-## 🏗️ Architecture & Workflow
+##  Architecture & Workflow
 
 ```mermaid
 flowchart TD
-    Start([Start]) --> Discover[🔍 discover_node]
-    Discover --> Evaluate[🧠 evaluate_relevance_node]
+    Start([Start]) --> Discover[ discover_node]
+    Discover --> Evaluate[ evaluate_relevance_node]
     
     Evaluate --> CheckRelevance{Score >= 60?}
-    CheckRelevance -- No --> EndDiscard([❌ Discard / END])
-    CheckRelevance -- Yes --> CheckCal[📅 check_calendar_node]
+    CheckRelevance -- No --> EndDiscard([ Discard / END])
+    CheckRelevance -- Yes --> CheckCal[ check_calendar_node]
     
-    CheckCal --> Draft[✍️ draft_email_node]
-    Draft --> HumanReview[👤 human_approval_node<br/>Approve / Edit / Reject]
+    CheckCal --> Draft[ draft_email_node]
+    Draft --> HumanReview[ human_approval_node<br/>Approve / Edit / Reject]
     
     HumanReview --> Decision{Decision?}
-    Decision -- Approved --> Send[🚀 send_outreach_node]
-    Decision -- Rejected --> EndRejected([🚫 Canceled / END])
+    Decision -- Approved --> Send[ send_outreach_node]
+    Decision -- Rejected --> EndRejected([ Canceled / END])
     
-    Send --> Finished([✅ Finished / END])
+    Send --> Finished([ Finished / END])
 ```
 
 ---
