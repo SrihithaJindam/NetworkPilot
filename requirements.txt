@@ -1,0 +1,20 @@
+# Core Agent Framework
+langgraph>=0.2.0
+langchain-core>=0.3.0
+langchain-openai>=0.2.0
+
+# Optional Web & Profile Scraping
+apify-client>=1.8.0
+
+# Environment variables
+python-dotenv>=1.0.0
+
+# Visual Dashboard UI (FastAPI)
+fastapi>=0.110.0
+uvicorn>=0.28.0
+
+# Google Calendar & Gmail Integration
+google-api-python-client>=2.100.0
+google-auth-httplib2>=0.2.0
+google-auth-oauthlib>=1.2.0
+
