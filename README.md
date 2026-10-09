@@ -1,10 +1,10 @@
-# 🧭 NetworkPilot
+#  NetworkPilot
 
 > An autonomous networking agent built with **LangGraph** that discovers relevant professionals via Apify, finds shared interests, checks calendar availability for open coffee chat slots, and generates personalized outreach email drafts with **Human-in-the-Loop** approval.
 
 ---
 
-## 🎯 Learning Objectives
+##  Learning Objectives
 
 This project is designed to be **simple, clear, and modular** so you can master the foundations of stateful agent workflows:
 
@@ -19,32 +19,32 @@ This project is designed to be **simple, clear, and modular** so you can master 
 
 ```mermaid
 flowchart TD
-    Start([Start]) --> Discover[ discover_node]
-    Discover --> Evaluate[ evaluate_relevance_node]
+    Start([Start]) --> Discover[discover_node]
+    Discover --> Evaluate[evaluate_relevance_node]
     
     Evaluate --> CheckRelevance{Score >= 60?}
-    CheckRelevance -- No --> EndDiscard([ Discard / END])
-    CheckRelevance -- Yes --> CheckCal[ check_calendar_node]
+    CheckRelevance -- No --> EndDiscard([Discard / END])
+    CheckRelevance -- Yes --> CheckCal[check_calendar_node]
     
-    CheckCal --> Draft[ draft_email_node]
-    Draft --> HumanReview[ human_approval_node<br/>Approve / Edit / Reject]
+    CheckCal --> Draft[draft_email_node]
+    Draft --> HumanReview[human_approval_node<br/>Approve / Edit / Reject]
     
     HumanReview --> Decision{Decision?}
-    Decision -- Approved --> Send[ send_outreach_node]
-    Decision -- Rejected --> EndRejected([ Canceled / END])
+    Decision -- Approved --> Send[send_outreach_node]
+    Decision -- Rejected --> EndRejected([Canceled / END])
     
-    Send --> Finished([ Finished / END])
+    Send --> Finished([Finished / END])
 ```
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```text
 NetworkPilot/
-├── cockpit.py        # 🚀 Modern Dark-Mode Agent Cockpit Dashboard (FastAPI)
-├── google_service.py # 🔑 Google Calendar availability & Gmail Draft generator
-├── GOOGLE_SETUP.md   # 📖 Step-by-step Google Calendar/Gmail OAuth guide
+├── cockpit.py        # Modern Dark-Mode Agent Cockpit Dashboard (FastAPI)
+├── google_service.py # Google Calendar availability & Gmail Draft generator
+├── GOOGLE_SETUP.md   # Step-by-step Google Calendar/Gmail OAuth guide
 ├── state.py          # Central AgentState schema (TypedDict)
 ├── services.py       # Apify discovery, calendar slots & LLM integrations
 ├── nodes.py          # LangGraph node functions (discover, evaluate, draft, approve)
@@ -56,7 +56,7 @@ NetworkPilot/
 
 ---
 
-## ⚡ Quickstart Guide (Run it Yourself)
+##  Quickstart Guide (Run it Yourself)
 
 Follow these steps in your terminal to set up and run the agent:
 
@@ -116,7 +116,7 @@ python main.py
 
 ---
 
-## 🧩 Key LangGraph Concepts Explained
+##  Key LangGraph Concepts Explained
 
 ### 1. State (`state.py`)
 In LangGraph, state is passed into each node and returned back:
