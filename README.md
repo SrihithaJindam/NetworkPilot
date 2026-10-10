@@ -42,9 +42,10 @@ flowchart TD
 
 ```text
 NetworkPilot/
-├── cockpit.py        # Modern Dark-Mode Agent Cockpit Dashboard (FastAPI)
-├── google_service.py # Google Calendar availability & Gmail Draft generator
-├── GOOGLE_SETUP.md   # Step-by-step Google Calendar/Gmail OAuth guide
+├── KNOWLEDGE.md      # 📘 LangGraph & AI Agents: Beginner's Knowledge Base
+├── cockpit.py        # 🚀 Modern Dark-Mode Agent Cockpit Dashboard (FastAPI)
+├── google_service.py # 🔑 Google Calendar availability & Gmail Draft generator
+├── GOOGLE_SETUP.md   # 📖 Step-by-step Google Calendar/Gmail OAuth guide
 ├── state.py          # Central AgentState schema (TypedDict)
 ├── services.py       # Apify discovery, calendar slots & LLM integrations
 ├── nodes.py          # LangGraph node functions (discover, evaluate, draft, approve)
